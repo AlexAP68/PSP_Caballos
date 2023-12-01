@@ -70,13 +70,13 @@ public class Main
     private void iniciarCarrerasolitaria(){
         boolean eleccion = true;
         while (eleccion) {
-            System.out.println("Introduce el número de caballos que participarán en la carrera (entre 10 y 20): ");
+            System.out.println("Introduce el numero de caballos que participaran en la carrera (entre 10 y 20): ");
 
             try {
                 numeroCaballos = sc.nextInt();
 
                 if (numeroCaballos < 10 || numeroCaballos > 20) {
-                    System.out.println("El número de caballos debe estar entre 10 y 20. Intente de nuevo.");
+                    System.out.println("El numero de caballos debe estar entre 10 y 20. Intente de nuevo.");
                     continue;
                 }
 
@@ -84,19 +84,19 @@ public class Main
                 eleccion = false;
             } catch (InputMismatchException e) {
                 e.getMessage();
-                System.out.println("Se necesita un número entero.");
+                System.out.println("Se necesita un numero entero.");
                 sc.next();
             }
         }
         eleccion = true;
         while (eleccion) {
-            System.out.println("Ahora introduce la distancia de la carrera (entre 0,4 y 4 Km):");
+            System.out.println("Ahora introduce la distancia de la carrera (entre 0,4Km y 4 Km):");
 
             try {
                 distancia = sc.nextDouble();
 
                 if (distancia < 0.4 || distancia > 4) {
-                    System.out.println("La distancia de la carrera debe estar entre 0,4 y 4 Km. Intente de nuevo.");
+                    System.out.println("La distancia de la carrera debe estar entre 0,4Km y 4 Km. Intente de nuevo.");
                     continue;
                 }
 
@@ -104,7 +104,7 @@ public class Main
                 eleccion = false;
             } catch (InputMismatchException e) {
                 e.getMessage();
-                System.out.println("Se requiere un número. (Utiliza como separador la coma)");
+                System.out.println("Se requiere un numero. (Utiliza como separador la coma)");
                 sc.next();
             }
         }
@@ -143,7 +143,7 @@ public class Main
                 System.out.println("Todo el tiempo. Siempre.");
                 System.exit(0);
             } else {
-                System.out.println("Respuesta no válida. Introduce 'si' o 'no'.");
+                System.out.println("Respuesta no valida. Introduce 'si' o 'no'.");
             }
         } while (!respuestaValida);
     }

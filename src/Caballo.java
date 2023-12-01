@@ -38,7 +38,7 @@ public class Caballo extends Thread
 
             if (!carrera.isPausado()) {
                 //Calcular la distancia recorrida
-                calculateDistanceCovered();
+                calculardistanciarecorrida();
                 if (distanciaRecorrida >= carrera.distanciacarrera) {
                     carrera.cruzarMeta(this);
                     break;
@@ -81,7 +81,6 @@ public class Caballo extends Thread
             System.out.println("  ");
 
             estado = 0;
-            this.velocidad = 15;
             //Estado viaje temporal
         }else {
             System.out.println( "-".repeat(liniaRecorrida) + "🐎\uD83C\uDF00" +   "-".repeat(100 - liniaRecorrida) + "|" + getName() + " Velocidad:" + getVelocidad() + "|Estado: Ha saltado en el tiempo");
@@ -102,7 +101,7 @@ public class Caballo extends Thread
             // Oveja
             this.estado = 1;
             this.velocidad = 0;
-        } else if (randomNum == 39 && contadorMuerto < (carrera.getHorses().size()/2) ) {
+        } else if (randomNum == 39 && contadorMuerto <= (carrera.getHorses().size()/2) ) {
             // ¡Hilo muere!
             Thread.currentThread().interrupt();
             incrementDeathCounter();
@@ -139,7 +138,7 @@ public class Caballo extends Thread
 
     }
 
-    private void calculateDistanceCovered() {
+    private void calculardistanciarecorrida() {
         setDistanciaRecorrida(getDistanciaRecorrida() +  ((double) velocidad / 3600));
     }
 

@@ -117,7 +117,7 @@ public class Carrera
                     showPodio();
                     respuestaValida = true;
                 } else {
-                    System.out.println("Respuesta no válida. Introduce 'si' o 'no'.");
+                    System.out.println("Respuesta no valida. Introduce 'si' o 'no'.");
                 }
             } while (!respuestaValida);
         }
